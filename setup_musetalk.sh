@@ -1,19 +1,28 @@
 git clone https://github.com/TMElyralab/MuseTalk.git
 
-SRC_FILE="download_requirements.py"
-DEST_DIR="HiFTNet"
+SRC_FILE="download_musetalk_model_weights.py"
+DEST_DIR="MuseTalk"
 
 if [ -f "$SRC_FILE" ]; then
     mv "$SRC_FILE" "$DEST_DIR/"
     echo "Moved $SRC_FILE to $DEST_DIR"
 fi
 
-SRC_FILE="setup_folders.py"
+SRC_FILE="down_ffmpeg.py"
 
 if [ -f "$SRC_FILE" ]; then
     mv "$SRC_FILE" "$DEST_DIR/"
     echo "Moved $SRC_FILE to $DEST_DIR"
 fi
+
+SRC_FILE="create_yaml.py"
+
+if [ -f "$SRC_FILE" ]; then
+    mv "$SRC_FILE" "$DEST_DIR/"
+    echo "Moved $SRC_FILE to $DEST_DIR"
+fi
+
+
 
 cd MuseTalk
 
@@ -37,10 +46,13 @@ mim install "mmcv>=2.0.1"
 mim install "mmdet>=3.1.0" 
 mim install "mmpose>=1.1.0" 
 
-python setup_folders.py
-python download_requirements.py
+python download_musetalk_model_weights.py
+python down_ffmpeg.py
 
-./musetalk_ffmpeg.sh 
+export FFMPEG_PATH=/musetalk/ffmpeg-4.4-amd64-static
+
+pythoon create_yaml.py
+python -m scripts.inference --inference_config configs/inference/takehome.yaml 
 
 source deactivate
 
