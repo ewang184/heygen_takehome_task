@@ -2,24 +2,24 @@ import os
 import requests
 from pathlib import Path
 
-# Directory structure
+# Updated model paths with direct download links
 model_paths = {
     'musetalk': [
-        ('https://huggingface.co/TMElyralab/MuseTalk/blob/main/musetalk/musetalk.json', 'musetalk.json'),
-        ('https://huggingface.co/TMElyralab/MuseTalk/blob/main/musetalk/pytorch_model.bin', 'pytorch_model.bin')
+        ('https://huggingface.co/TMElyralab/MuseTalk/resolve/main/musetalk/musetalk.json', 'musetalk.json'),
+        ('https://huggingface.co/TMElyralab/MuseTalk/resolve/main/musetalk/pytorch_model.bin', 'pytorch_model.bin')
     ],
     'sd-vae-ft-mse': [
-        ('https://huggingface.co/stabilityai/sd-vae-ft-mse/blob/main/config.json', 'config.json'),
-        ('https://huggingface.co/stabilityai/sd-vae-ft-mse/blob/main/diffusion_pytorch_model.bin', 'diffusion_pytorch_model.bin')
+        ('https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/main/config.json', 'config.json'),
+        ('https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/main/diffusion_pytorch_model.bin', 'diffusion_pytorch_model.bin')
     ],
     'whisper': [
         ('https://openaipublic.azureedge.net/main/whisper/models/65147644a518d12f04e32d6f3b26facc3f8dd46e5390956a9424a650c0ce22b9/tiny.pt', 'tiny.pt')
     ],
     'dwpose': [
-        ('https://huggingface.co/yzd-v/DWPose/blob/main/dw-ll_ucoco_384.pth', 'dw-ll_ucoco_384.pth')
+        ('https://huggingface.co/yzd-v/DWPose/resolve/main/dw-ll_ucoco_384.pth', 'dw-ll_ucoco_384.pth')
     ],
     'face-parse-bisent': [
-        ('https://drive.google.com/uc?id=154JgKpzCPW82qINcVieuPH3fZ2e0P812', '79999_iter.pth'),
+        ('https://drive.google.com/uc?id=154JgKpzCPW82qINcVieuPH3fZ2e0P812&export=download', '79999_iter.pth'),
         ('https://download.pytorch.org/models/resnet18-5c106cde.pth', 'resnet18-5c106cde.pth')
     ]
 }
