@@ -26,8 +26,8 @@ SRC_FILE="output_resynthesized.wav"
 DEST_DIR="MuseTalk/data/audio"
 
 if [ -f "$SRC_FILE" ]; then
-    mv "$SRC_FILE" "$DEST_DIR/"
-    echo "Moved $SRC_FILE to $DEST_DIR"
+    cp "$SRC_FILE" "$DEST_DIR/"
+    echo "Copied $SRC_FILE to $DEST_DIR"
 fi
 
 
@@ -41,8 +41,8 @@ SRC_FILE="$video_file"
 DEST_DIR="MuseTalk/data/video"
 
 if [ -f "$SRC_FILE" ]; then
-    mv "$SRC_FILE" "$DEST_DIR/"
-    echo "Moved $SRC_FILE to $DEST_DIR"
+    cp "$SRC_FILE" "$DEST_DIR/"
+    echo "Copied $SRC_FILE to $DEST_DIR"
 fi
 
 cd MuseTalk
