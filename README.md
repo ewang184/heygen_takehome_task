@@ -57,6 +57,20 @@ using multiple venvs and switching between them, and the ease of using the progr
 
 ## For the following, assume that the setup code has already been run
 
+Test re-synthesizing speech
+
+```
+./run_hift
+```
+
+Test lip-syncing
+
+```
+./run_musetalk path_to_video path_to_audio
+```
+
+In addition, before running the following, make sure that heygen_env from running setup_translate.sh is activated
+
 Test speech-to-text in English
 
 ```
@@ -74,14 +88,3 @@ Test German text to speech
 ```
 python text_to_speech_utils.py
 ```
-
-Test re-synthesizing speech
-
-```
-./run_hift
-```
-
-Test lip-syncing
-
-```
-./run_musetalk path_to_video path_to_audio
