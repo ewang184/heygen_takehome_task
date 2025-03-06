@@ -16,9 +16,3 @@ RUN apt-get update && apt-get install -y \
 # Copy your application files
 COPY . /app
 
-# Set executable permissions for your setup script
-RUN chmod +x /app/setup.sh
-
-# Only the last CMD will be executed
-CMD ["/bin/bash", "/app/setup.sh"]
-CMD ["python", "/app/generate_new_video.py", "Tanzania-2.mp4"]
