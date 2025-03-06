@@ -1,5 +1,8 @@
 git clone https://github.com/TMElyralab/MuseTalk.git
 
+echo "Creating results folder..."
+mkdir -p results
+
 SRC_FILE="download_musetalk_model_weights.py"
 DEST_DIR="MuseTalk"
 
