@@ -10,8 +10,8 @@ def install_espeak_ng():
         # For Linux (Ubuntu/Debian)
         try:
             print("Installing espeak-ng on Linux...")
-            subprocess.check_call(['sudo', 'apt', 'update'])
-            subprocess.check_call(['sudo', 'apt', 'install', 'espeak-ng', '-y'])
+            subprocess.check_call(['apt', 'update'])
+            subprocess.check_call(['apt', 'install', 'espeak-ng', '-y'])
             print("espeak-ng installed successfully!")
         except subprocess.CalledProcessError as e:
             print(f"Error installing espeak-ng: {e}")
