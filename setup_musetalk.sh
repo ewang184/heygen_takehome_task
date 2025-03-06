@@ -76,16 +76,7 @@ python down_ffmpeg.py
 export FFMPEG_PATH=/musetalk/ffmpeg-4.4-amd64-static
 
 python create_yaml.py
-python -m scripts.inference --inference_config configs/inference/takehome.yaml 
-
-source deactivate
 
 cd ..
 
-SRC_FILE="MuseTalk/results/${video_file}_output_resynthesized.mp4"
-DEST_DIR="./"
-
-if [ -f "$SRC_FILE" ]; then
-    mv "$SRC_FILE" "$DEST_DIR/"
-    echo "Moved $SRC_FILE to $DEST_DIR"
-fi
+deactivate
