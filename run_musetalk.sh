@@ -75,7 +75,7 @@ python down_ffmpeg.py
 
 export FFMPEG_PATH=/musetalk/ffmpeg-4.4-amd64-static
 
-pythoon create_yaml.py
+python create_yaml.py
 python -m scripts.inference --inference_config configs/inference/takehome.yaml 
 
 source deactivate
