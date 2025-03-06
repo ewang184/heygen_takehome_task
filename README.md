@@ -70,6 +70,8 @@ Test lip-syncing
 ```
 
 In addition, before running the following, make sure that heygen_env from running setup_translate.sh is activated
+Also, please make sure that Tanzania-2.mp4 is in the root directory.
+Also note that running German text to speech demo may overwrite current stored data.
 
 Test speech-to-text in English
 
