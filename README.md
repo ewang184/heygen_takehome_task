@@ -88,3 +88,9 @@ Test German text to speech
 ```
 python text_to_speech_utils.py
 ```
+
+Test speech to text alignment
+
+```
+python speech_to_text_align.py
+```
