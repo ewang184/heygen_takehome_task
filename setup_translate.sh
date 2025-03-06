@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RUN python3.10 -m venv heygen_env
+python3.10 -m venv heygen_env
 
 VENV_PATH="heygen_env/bin/activate"
 
@@ -30,3 +30,5 @@ if [ -z "$video_file" ]; then
 fi
 
 python translate_video.py "$video_file"
+
+deactivate

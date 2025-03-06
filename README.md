@@ -4,12 +4,12 @@ For a given input video_file, run the following
 Note: It will be necessary to agree to coqui terms of non-commercial CPML when running setup_translate
 
 ```
-docker build -t heygen_docker . --no-cache
+docker build -t heygen_docker .
 docker run -it --name heygen_container heygen_docker /bin/bash
 ./setup.sh
-./setup_translate.sh
-./setup_hift.sh
-./setup_musetalk.sh
+source setup_translate.sh
+source setup_hift
+source setup_musetalk
 ```
 
 ### Execution
@@ -17,10 +17,10 @@ docker run -it --name heygen_container heygen_docker /bin/bash
 While inside the docker container
 
 ```
-./run_translate.sh path_to_video
+python translate_audio path_to_video
 ./run_hift.sh
 python replace_audio.py
-./run_musetalk.sh path_to_video
+./run_musetalk.sh path_to_video output_resynthesized.wav
 ```
 
 ### Assumptions made
@@ -45,6 +45,12 @@ and German were too different, then the shortened/lengthened German speaking wou
 Another limitation is that due to the sentence level alignment, it is possible for words inside the same sentence
 to become misaligned. For example, "Crocodile" might be mentioned at the beginning of an English sentence but
 be mentioned at the end of the translation to German.
+
+Also, there is some crackling heard throughout the video due to the time-warping of the sentences. I attempted to address
+this issue by doing audio re-synthesis with a vocoder, with limited success.
+
+Finally, some of the resources I used require different versions of the same python libraries. This results in 
+using multiple venvs and switching between them, and the ease of using the program can be improved here.
 
 ### Commands to test functionality
 
@@ -76,3 +82,5 @@ Test re-synthesizing speech
 
 Test lip-syncing
 
+```
+./run_musetalk path_to_video path_to_audio
