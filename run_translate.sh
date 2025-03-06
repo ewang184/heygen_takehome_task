@@ -12,17 +12,6 @@ else
     exit 1
 fi
 
-echo "Installing dependencies..."
-pip install -r requirements.txt
-pip uninstall numpy --yes
-pip install "numpy<2"
-
-echo "Creating 'warped_audio' folder..."
-mkdir -p warped_audio
-
-echo "Creating 'german_sentences' folder..."
-mkdir -p german_sentences
-
 video_file="$1"
 if [ -z "$video_file" ]; then
   echo "Error: Please provide the path to the video file as an argument."
@@ -30,3 +19,5 @@ if [ -z "$video_file" ]; then
 fi
 
 python translate_video.py "$video_file"
+
+deactivate

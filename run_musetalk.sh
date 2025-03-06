@@ -1,5 +1,11 @@
 cd MuseTalk
 
+video_file="$1"
+if [ -z "$video_file" ]; then
+    echo "Error: Please provide the path to the video file as an argument."
+    exit 1
+fi
+
 VENV_PATH="muse_env/bin/activate"
 
 if [ -f "$VENV_PATH" ]; then
@@ -13,7 +19,7 @@ fi
 
 python -m scripts.inference --inference_config configs/inference/takehome.yaml 
 
-source deactivate
+deactivate
 
 cd ..
 
