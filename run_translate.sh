@@ -13,7 +13,7 @@ else
 fi
 
 echo "Installing dependencies..."
-pip install -r requirements.txt
+pip install --no-deps -r requirements.txt
 
 echo "Creating 'warped_audio' folder..."
 mkdir -p warped_audio
@@ -23,4 +23,9 @@ mkdir -p german_sentences
 
 python install_espeak.py 
 
-echo "Setup completed successfully!"
+echo "Enter the path to the video file (e.g., Tanzania-2.mp4):"
+read video_file
+
+python translate_video.py "$video_file"
+
+source deactivate
