@@ -1,4 +1,7 @@
-#moviepy==2.1.2
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.2.2+cpu
+torchaudio==2.2.2+cpu
+typing_extensions>=4.0.0
 transformers==4.47.1
 speechrecognition==3.14.1
 sacremoses==0.1.1
@@ -6,8 +9,6 @@ sentencepiece==0.2.0
 git+https://github.com/openai/whisper.git
 datasets==3.3.2
 soundfile==0.13.1
-torch==2.2.2 
-torchaudio==2.2.2 
 speechbrain==1.0.2
 tqdm
 sounddevice==0.5.1
