@@ -26,4 +26,10 @@ read video_file
 
 python translate_video.py "$video_file"
 
+pip uninstall numpy --yes
+pip install "numpy<2"
+
+python time_video.py translated_text.txt
+
 source deactivate
+
