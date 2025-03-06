@@ -40,6 +40,10 @@ source setup_hift.sh
 source setup_musetalk.sh path_to_video
 ```
 
+Note:
+
+It is possible to run this code without a docker file. I have tested it on python3.10 with macOS version 13.6.3. 
+
 # Execution
 While inside the docker container
 
