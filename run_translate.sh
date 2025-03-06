@@ -14,6 +14,8 @@ fi
 
 echo "Installing dependencies..."
 pip install -r requirements.txt
+pip uninstall numpy --yes
+pip install "numpy<2"
 
 echo "Creating 'warped_audio' folder..."
 mkdir -p warped_audio
@@ -25,11 +27,6 @@ echo "Enter the path to the video file (e.g., Tanzania-2.mp4):"
 read video_file
 
 python translate_video.py "$video_file"
-
-pip uninstall numpy --yes
-pip install "numpy<2"
-
-python time_video.py translated_text.txt
 
 source deactivate
 
