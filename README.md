@@ -49,7 +49,8 @@ source run_hift.sh
 source run_musetalk.sh path_to_video
 ```
 
-
+Output audio file is found at results/output_resynthesized.wav
+Updated video file is found at results/{video_name}_output_resynthesized.mp4
 
 # Assumptions made
 I assumed that translating into German from English would mostly preserve the order of the meaning. 
