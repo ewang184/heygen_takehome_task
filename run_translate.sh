@@ -23,7 +23,10 @@ mkdir -p warped_audio
 echo "Creating 'german_sentences' folder..."
 mkdir -p german_sentences
 
-echo "Enter the path to the video file (e.g., Tanzania-2.mp4):"
-read video_file
+video_file="$1"
+if [ -z "$video_file" ]; then
+  echo "Error: Please provide the path to the video file as an argument."
+  exit 1
+fi
 
 python translate_video.py "$video_file"
