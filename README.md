@@ -1,5 +1,5 @@
 ### Setup
-For a given input video_file, run the following
+For a given input video_file, move the file to the root directory and run the following
 
 Note: It will be necessary to agree to coqui terms of non-commercial CPML when running setup_translate
 
