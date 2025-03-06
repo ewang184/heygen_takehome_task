@@ -48,6 +48,6 @@ pip install -r requirements.txt
 
 python download_cp_hifigan.py
 
-python resynth.py
-
 cd ..
+
+deactivate

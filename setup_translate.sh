@@ -23,12 +23,6 @@ mkdir -p warped_audio
 echo "Creating 'german_sentences' folder..."
 mkdir -p german_sentences
 
-video_file="$1"
-if [ -z "$video_file" ]; then
-  echo "Error: Please provide the path to the video file as an argument."
-  exit 1
-fi
-
-python translate_video.py "$video_file"
+python install_espeak.py
 
 deactivate

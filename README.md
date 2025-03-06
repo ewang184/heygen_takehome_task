@@ -6,7 +6,6 @@ Note: It will be necessary to agree to coqui terms of non-commercial CPML when r
 ```
 docker build -t heygen_docker .
 docker run -it --name heygen_container heygen_docker /bin/bash
-./setup.sh
 source setup_translate.sh
 source setup_hift
 source setup_musetalk
