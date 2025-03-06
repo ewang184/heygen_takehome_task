@@ -7,18 +7,17 @@ Note: It will be necessary to agree to coqui terms of non-commercial CPML when r
 docker build -t heygen_docker .
 docker run -it --name heygen_container heygen_docker /bin/bash
 source setup_translate.sh
-source setup_hift
-source setup_musetalk
+source setup_hift.sh
+source setup_musetalk.sh path_to_video
 ```
 
 # Execution
 While inside the docker container
 
 ```
-python translate_audio path_to_video
-./run_hift.sh
-python replace_audio.py
-./run_musetalk.sh path_to_video output_resynthesized.wav
+source run_translate.sh
+source run_hift.sh
+source run_musetalk.sh path_to_video
 ```
 
 
