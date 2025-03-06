@@ -27,6 +27,3 @@ echo "Enter the path to the video file (e.g., Tanzania-2.mp4):"
 read video_file
 
 python translate_video.py "$video_file"
-
-source deactivate
-
