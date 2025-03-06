@@ -32,6 +32,20 @@ echo "$new_requirements" > "$requirements_file_path"
 
 echo "requirements.txt has been updated."
 
+python3.10 -m venv hift_env
+
+VENV_PATH="hift_env/bin/activate"
+
+if [ -f "$VENV_PATH" ]; then
+    source "$VENV_PATH"
+    echo "Virtual environment activated."
+else
+    echo "Error: Virtual environment activate script not found."
+    exit 1
+fi
+
+pip install -r requirements.txt
+
 python download_cp_hifigan.py
 
 python resynth.py
