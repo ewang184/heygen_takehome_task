@@ -21,8 +21,6 @@ mkdir -p warped_audio
 echo "Creating 'german_sentences' folder..."
 mkdir -p german_sentences
 
-python install_espeak.py 
-
 echo "Enter the path to the video file (e.g., Tanzania-2.mp4):"
 read video_file
 
