@@ -62,4 +62,4 @@ def resynthesize_audio(input_wav_path, output_wav_path, cp_path="cp_hifigan"):
     # Save the resynthesized audio
     write(output_wav_path, sr, audio)
 
-resynthesize_audio("./../warped_german_voice.wav", "./../output_resynthesized.wav")
+resynthesize_audio("./../warped_german_voice.wav", "./../results/output_resynthesized.wav")
