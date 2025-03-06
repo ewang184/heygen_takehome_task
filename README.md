@@ -23,6 +23,10 @@ Speech re-synthesis is done with a vocoder. I chose to use a neural vocoder call
 
 Lip-syncing is done with MuseTalk. This is a model with U-net backbone, VAE encoders, and whisper time synchronization.
 
+# Example output:
+
+https://github.com/user-attachments/assets/cfef167a-6374-4636-a716-cf7abfbce570
+
 # Setup
 For a given input video_file, move the file to the root directory and run the following.
 
