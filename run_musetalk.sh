@@ -61,6 +61,9 @@ mim install "mmcv>=2.0.1"
 mim install "mmdet>=3.1.0" 
 mim install "mmpose>=1.1.0" 
 
+pip uninstall huggingface_hub --yes
+pip install huggingface_hub==0.25.0
+
 python download_musetalk_model_weights.py
 python down_ffmpeg.py
 
