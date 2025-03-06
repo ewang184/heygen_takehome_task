@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/cfef167a-6374-4636-a716-cf7abfbce570
 # Setup
 For a given input video_file, move the file to the root directory and run the following.
 
-Note: It will be necessary to agree to coqui terms of non-commercial CPML when running setup_translate
+Note: It will be necessary to agree to terms of the coqui non-commercial license when running setup_translate
 
 ```
 docker build -t heygen_docker .
