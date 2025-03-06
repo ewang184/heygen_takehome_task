@@ -6,8 +6,7 @@ sentencepiece==0.2.0
 git+https://github.com/openai/whisper.git
 datasets==3.3.2
 soundfile==0.13.1
-torch==2.2.2
-torchaudio==2.2.2
+torch==2.2.2 torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 speechbrain==1.0.2
 tqdm
 sounddevice==0.5.1
