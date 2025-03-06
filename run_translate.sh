@@ -13,7 +13,7 @@ else
 fi
 
 echo "Installing dependencies..."
-pip install --no-deps -r requirements.txt
+pip install -r requirements.txt
 
 echo "Creating 'warped_audio' folder..."
 mkdir -p warped_audio
