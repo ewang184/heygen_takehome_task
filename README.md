@@ -31,6 +31,11 @@ required by the English.
 # Limitations
 I used a less powerful lip-sync model due to computational constraints. This results in less realistic lip-syncing. 
 
+In addition, this model has the downside that it appears that mouth size in inference is strongly affected by a
+hyperparameter that must be provided at runtime. I manually searched for a good hyperparameter since their 
+recommended ones do not appear to be natural for this specific video (in my opinion). However, there is no guarantee
+that any fixed hyperparameter is good over all videos, so it may be necessary to repeat this process for different videos
+
 The assumptions that I made are necessary for realistic-sounding output. Firstly, I assumed that translating into 
 German from English would mostly preserve the order of the meaning. This is required for my solution, since I do 
 sentence-level alignment and warping, so each sentence is matched together and the German sentence is stretched 
