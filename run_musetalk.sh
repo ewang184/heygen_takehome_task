@@ -30,7 +30,13 @@ if [ -f "$SRC_FILE" ]; then
     echo "Moved $SRC_FILE to $DEST_DIR"
 fi
 
-read video_file
+
+video_file="$1"
+if [ -z "$video_file" ]; then
+    echo "Error: Please provide the path to the video file as an argument."
+    exit 1
+fi
+
 SRC_FILE="$video_file"
 DEST_DIR="MuseTalk/data/video"
 
