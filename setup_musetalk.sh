@@ -30,7 +30,7 @@ if [ -f "$SRC_FILE" ]; then
     echo "Moved $SRC_FILE to $DEST_DIR"
 fi
 
-SRC_FILE="output_resynthesized.wav"
+SRC_FILE="results/output_resynthesized.wav"
 DEST_DIR="MuseTalk/data/audio"
 
 if [ -f "$SRC_FILE" ]; then
