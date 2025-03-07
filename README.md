@@ -48,7 +48,7 @@ It is possible to run this code without a docker file. I have tested it on pytho
 While inside the docker container
 
 ```
-source run_translate.sh
+source run_translate.sh path_to_video
 source run_hift.sh
 source run_musetalk.sh path_to_video
 ```
