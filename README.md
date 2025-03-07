@@ -74,6 +74,9 @@ However, this would reduce translation quality.
 # Limitations
 I used a less powerful lip-sync model due to computational constraints. This results in less realistic lip-syncing. 
 
+Also due to computational constraints (I don't have a GPU), I chose to make the code run on CPU only, because I could
+only verify this on CPU. This results in slower-than-normal code.
+
 In addition, this model has the downside that it appears that mouth size in inference is strongly affected by a
 hyperparameter that must be provided at runtime. I manually searched for a good hyperparameter since their 
 recommended ones do not appear to be natural for this specific video (in my opinion). However, there is no guarantee
