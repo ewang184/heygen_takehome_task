@@ -24,7 +24,7 @@ deactivate
 cd ..
 
 SRC_FILE="MuseTalk/results/${video_file}_output_resynthesized.mp4"
-DEST_DIR="./results/"
+DEST_DIR="./../results/"
 
 if [ -f "$SRC_FILE" ]; then
     cp "$SRC_FILE" "$DEST_DIR/"
