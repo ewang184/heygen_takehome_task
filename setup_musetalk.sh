@@ -1,7 +1,12 @@
-git clone https://github.com/TMElyralab/MuseTalk.git
+echo "Checking if 'results' folder exists..."
+if [ ! -d "results" ]; then
+    echo "Creating 'results' folder..."
+    mkdir results
+else
+    echo "'results' folder already exists."
+fi
 
-echo "Creating results folder..."
-mkdir -p results
+git clone https://github.com/TMElyralab/MuseTalk.git
 
 SRC_FILE="download_musetalk_model_weights.py"
 DEST_DIR="MuseTalk"

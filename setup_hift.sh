@@ -1,3 +1,11 @@
+echo "Checking if 'results' folder exists..."
+if [ ! -d "results" ]; then
+    echo "Creating 'results' folder..."
+    mkdir results
+else
+    echo "'results' folder already exists."
+fi
+
 git clone https://github.com/yl4579/HiFTNet.git
 
 SRC_FILE="resynth.py"
