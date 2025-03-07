@@ -1,11 +1,16 @@
 import yaml
 from pathlib import Path
-
+import argparse
 # Script to create MuseTalk config file
+
+parser = argparse.ArgumentParser(description="Get video name")
+
+parser.add_argument("--video_name", required=True, help="Video name")
+args = parser.parse_args()
 
 data = {
     'task_0': {
-        'video_path': 'data/video/Tanzania-2.mp4',
+        'video_path': f'data/video/{args.video_name}',
         'audio_path': 'data/audio/output_resynthesized.wav',
         'bbox_shift': -15
     }
