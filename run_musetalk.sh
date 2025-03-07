@@ -6,6 +6,8 @@ if [ -z "$video_file" ]; then
     exit 1
 fi
 
+video_name="${video_file%.mp4}"
+
 VENV_PATH="muse_env/bin/activate"
 
 if [ -f "$VENV_PATH" ]; then
@@ -21,7 +23,7 @@ python -m scripts.inference --inference_config configs/inference/takehome.yaml
 
 deactivate
 
-SRC_FILE="MuseTalk/results/${video_file}_output_resynthesized.mp4"
+SRC_FILE="MuseTalk/results/${video_name}_output_resynthesized.mp4"
 DEST_DIR="./../results/"
 
 if [ -f "$SRC_FILE" ]; then
