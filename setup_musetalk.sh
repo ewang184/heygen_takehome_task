@@ -83,7 +83,7 @@ python down_ffmpeg.py
 
 export FFMPEG_PATH=/musetalk/ffmpeg-4.4-amd64-static
 
-python create_yaml.py
+python create_yaml.py "$video_file"
 
 cd ..
 
