@@ -12,7 +12,7 @@ data = {
     'task_0': {
         'video_path': f'data/video/{args.video_name}',
         'audio_path': 'data/audio/output_resynthesized.wav',
-        'bbox_shift': -15
+        'bbox_shift': -10
     }
 }
 
