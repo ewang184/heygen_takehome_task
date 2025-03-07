@@ -98,6 +98,8 @@ this issue by doing audio re-synthesis with a vocoder, with limited success.
 
 Another issue is that the lipsync generation, even after switching to a more lightweight model, is still quite slow.
 
+One issue I noticed is that sometimes when sentences are very short, speech synthesis generates poor results.
+
 Finally, some of the resources I used require different versions of the same python libraries. This results in 
 using multiple venvs and switching between them, and the ease of using the program can be improved here.
 
