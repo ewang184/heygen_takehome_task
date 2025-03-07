@@ -23,7 +23,7 @@ python -m scripts.inference --inference_config configs/inference/takehome.yaml
 
 deactivate
 
-SRC_FILE="MuseTalk/results/${video_name}_output_resynthesized.mp4"
+SRC_FILE="results/${video_name}_output_resynthesized.mp4"
 DEST_DIR="./../results/"
 
 if [ -f "$SRC_FILE" ]; then
