@@ -5,7 +5,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Get video name")
 
-parser.add_argument("--video_name", required=True, help="Video name")
+parser.add_argument("video_name", type=str, help="Video name")
 args = parser.parse_args()
 
 data = {
