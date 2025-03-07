@@ -21,8 +21,6 @@ python -m scripts.inference --inference_config configs/inference/takehome.yaml
 
 deactivate
 
-cd ..
-
 SRC_FILE="MuseTalk/results/${video_file}_output_resynthesized.mp4"
 DEST_DIR="./../results/"
 
@@ -30,3 +28,5 @@ if [ -f "$SRC_FILE" ]; then
     cp "$SRC_FILE" "$DEST_DIR/"
     echo "Moved $SRC_FILE to $DEST_DIR"
 fi
+
+cd ..
