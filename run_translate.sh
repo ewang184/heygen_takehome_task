@@ -1,7 +1,5 @@
 #!/bin/bash
 
-python3.10 -m venv heygen_env
-
 VENV_PATH="heygen_env/bin/activate"
 
 if [ -f "$VENV_PATH" ]; then
